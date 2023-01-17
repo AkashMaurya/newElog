@@ -1,0 +1,81 @@
+:root{
+--color-flickr-pink:#F72585;
+--color-byzantine:#B5179E;
+--color-purple:#7209B7;
+--color-purple-1:#560BAD;
+--color-trypan-blue-1:#480CA8;
+--color-Trypan-Blue:#3A0CA3;
+--color-persian-blue:#3F37C9;
+--color-ultra-marine-blue:#4361EE;
+--color-dodger-blue:#4895EF;
+--color-Vivid-Sky-Blue:#4CC9F0;
+--font-style:'Noto Sans', sans-serif;
+}
+
+* {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+.HoverDiv {
+position: relative;
+overflow: hidden;
+border: 1px solid black;
+width: 360px;
+margin: 10px;
+}
+.HoverDiv img {
+max-width: 100%;
+text-align: center;
+-moz-transition: all 0.3s;
+-webkit-transition: all 0.3s;
+transition: all 0.5s;
+}
+.HoverDiv:hover img {
+-moz-transform: scale(1.1);
+-webkit-transform: scale(1.1);
+transform: scale(0.1);
+}
+img {
+display: inline-block;
+border: 1px solid #ddd;
+border-radius: 4px;
+padding: 5px;
+transition: 0.3s;
+position: relative;
+z-index: 1;
+}
+
+
+img:hover {
+box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+-webkit-transform: skewX(-20deg);
+-ms-transform: skewX(-10deg);
+transform: skewX(-10deg);
+-webkit-transform-origin: 0 0;
+-ms-transform-origin: 0 0;
+transform-origin: 0 0;
+}
+
+
+#myBtn {
+display: none;
+position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 99;
+font-size: 18px;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 15px;
+border-radius: 4px;
+}
+
+
+
+#myBtn:hover {
+background-color: #555;
+}
