@@ -22,27 +22,21 @@
 </head>
 
 <body>
-    <nav>
-        <p id="logo">LogBook</p>
-        <ul id="menus">
-            <li class="menu-item">Home</li>
-            <li class="menu-item">About</li>
-            <li class="menu-item">Contact</li>
-            <li class="menu-item"><button id="btn">Login</button></li>
-
+    <nav id="nav">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkBtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="logo">LogBook</label>
+        <ul >
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" id="btn">Login</a></li>
         </ul>
-        <i class="fa-solid fa-bars" id="open-menu"></i>
-        <i class="fa-solid fa-x" id="close-menu"></i>
 
     </nav>
 
-
-    <ul id="mob-menus">
-        <li class="mob-menu-item">Home</li>
-        <li class="mob-menu-item">About</li>
-        <li class="mob-menu-item">Contact</li>
-        <li class="mob-menu-item"><button id="mob-btn" onclick="MenuBar()">Login</button></li>
-    </ul>
 
 </body>
 

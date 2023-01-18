@@ -33,131 +33,144 @@
     * {
         margin: 0;
         padding: 0;
-        box-sizing: 0;
-        font-family: var(--font-style);
+        box-sizing: border-box;
 
+        text-decoration: none;
+        list-style-type: none;
     }
 
     body {
-        background: var(--body-background);
+        width: 100%;
+        height: 100vh;
+        font-family: var(--font-style);
     }
 
-    /* navbar code start from here */
-    nav {
-        display: flex;
-        justify-content: space-between;
-        padding: 15px;
-        background: var(--nav-color-background-color);
-        color: white;
-        align-items: center;
-
+    #nav {
+        background: linear-gradient(#4361EE, #3F37C9);
+        width: 100%;
+        height: 80px;
     }
 
-    #logo {
-        font-size: 1.5em;
-    }
-
-    #menus {
-        display: flex;
-        list-style-type: none;
-        gap: 15px;
-        align-items: center;
-    }
-
-    #logo,
-    .menu-item {
+    label.logo {
+        color: #fff;
+        font-size: 35px;
+        line-height: 80px;
+        font-weight: bold;
+        padding: 0 100px;
         cursor: pointer;
+
     }
 
+    nav ul {
+        float: right;
+        margin-right: 20px;
+    }
 
-    .menu-item {
+    nav ul li {
+        display: inline-block;
+        line-height: 80px;
+        margin: 5px;
+    }
+
+    nav ul li a {
+
+        color: #fff;
+        font-size: 17px;
+        text-transform: uppercase;
+        padding: 7px 13px;
         transition: 800ms;
+
     }
 
-    .menu-item:hover {
-        transform: translateY(-5px);
-        color: var(--body-background) cursor: pointer;
-    }
-
-    #btn {
-        padding: 5px 10px;
-        font-size: 1em;
-        border: none;
+    a.active,
+    a:hover {
+        background:#7209B7;
         border-radius: 5px;
-        transition: 800ms;
+        transition: .6s;
+        transform: translateY(-5px);
     }
 
-    #btn:hover {
-        background-color: #3A0CA3;
-        transform: translateY(-5px);
-        background-color: val(--nav-color-background-color);
-        color: white;
+    .checkBtn {
+        color: #fff;
+        float: right;
+        font-size: 30px;
+        line-height: 80px;
+        margin-right: 60px;
         cursor: pointer;
     }
 
-
-    /* mobile and tablet device menu  code starts here*/
-
-    #mob-menus {
-        text-align: center;
-        background-color: var(--color-byzantine);
+    #btn{
+        background-color: #480CA8;
+        border:none;
+        border-radius: 10px;
+  
     }
-
-    .mob-menu-item {
-        padding: 20px 0;
-        font-size: 1.2em;
+     #btn:hover{
+        background-color: #1a0350;
+        border:none;
+        border-radius: 10px;
+     
         cursor: pointer;
-        background: plum;
-        border: 0.9px solid plum;
+       
+    }
+
+    #check,
+    .checkBtn {
         display: none;
+
     }
 
-    #mob-btn {
-
-        font-size: 1em;
-        padding: 8px 15px;
-        background-color: #3A0CA3;
-        color: white;
-        border: none;
-        border-radius: 5px;
-    }
-    #open-menu {
-        display: none;
-    }
-
-    #close-menu {
-        display: none;
-    }
-
-    @media screen and (max-width: 836px) {
-        .menu-item {
-            display: none;
+    @media (max-width:960px) {
+        label.logo {
+            font-size: 30px;
+            padding-left: 60px;
         }
 
-        #open-menu {
-            display: inline;
-
+        nav ul li a {
+            font-size: 15px;
         }
-
-
-
-        /* .mob-menu-item {
-            padding: 20px 0;
-            font-size: 1.2em;
-            cursor: pointer;
-            background: plum;
-            border: 0.9px solid plum;
-            transition: 1s;
-            display: none;
-        } */
-
     }
 
-    
+    @media (max-width:850px) {
+        .checkBtn {
+            display: block;
+        }
 
-    /* mobile and tablet device menu code ends here*/
+        nav ul {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: #480CA8;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all 0.6s;
+        }
+
+        nav ul li {
+            display: block;
+        }
+
+        nav ul li a {
+            font-size: 20px;
+            color: #FBFCFF
+        }
+
+        a.active,
+        a:hover {
+            background: none;
+            color: var(--color-flickr-pink);
+            transition: 0.6s;
+        }
+
+        #check:checked~ul {
+            left: 0;
+        }
+
+        /* mobile and tablet device menu code ends here*/
 
 
 
-    /* navbar code ends from here */
+        /* navbar code ends from here */
+    }
 </style>
